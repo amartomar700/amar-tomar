@@ -1,0 +1,6 @@
+{
+  "name": "TradeQuote - Multi-Trade Quotation, Estimate & Invoice Maker",
+  "description": "Offline-first mobile quotation, estimate, and invoice creator for field technicians, contractors, and service providers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  input, textarea, select {
+    user-select: text;
+  }
+}
+
+/* Custom scrollbars for compact mobile lists */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* High contrast outdoor sunlight visibility styling */
+.outdoor-readable {
+  text-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+/* Print Stylesheet for exact A4 Document Print / PDF generation */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-document, #printable-document * {
+    visibility: visible;
+  }
+  #printable-document {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 20mm !important;
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+}
